@@ -1,0 +1,35 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.div1,
+.div2 {
+	height: 100vh;
+	width: 100%;
+}
+
+.div1 {
+	background-color: blueviolet;
+}
+
+.div2 {
+	background-color: aqua;
+}
+
+.square {
+	width: 100px;
+	height: 100px;
+	background-color: red;
+}
+
+.square2 {
+	width: 100px;
+	height: 100px;
+	background-color: wheat;
+	margin-top: 300px;
+}
+
+.red {
+	background-color: yellow;
+}
