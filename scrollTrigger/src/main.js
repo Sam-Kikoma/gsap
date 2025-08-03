@@ -3,17 +3,25 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.to(".square", {
-	x: 700,
-	duration: 5,
+const tl = gsap.timeline({
 	scrollTrigger: {
 		trigger: ".square",
-		start: "top 60%",
-		end: "top 40%",
-		toggleActions: "play none none none",
-		markers: {
-			fontSize: "3rem",
-		},
-		toggleClass: "red",
+		markers: true,
+		start: "top 80%",
+		stop: "top 30%",
 	},
 });
+
+tl.to(".square", {
+	x: 500,
+	duration: 2,
+})
+	.to(".square", {
+		y: 120,
+		duration: 5,
+		rotate: 180,
+	})
+	.to(".square", {
+		x: 0,
+		duration: 2,
+	});
