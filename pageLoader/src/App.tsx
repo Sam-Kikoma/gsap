@@ -32,8 +32,8 @@ const App = () => {
 
 	return (
 		<main className="flex-center h-dvh w-full">
-			<p className="text-9xl md:text-[400px] will-change-transform" ref={splitRef}>
-				CONTENT.
+			<p className="text-9xl md:text-[300px] will-change-transform" ref={splitRef}>
+				CONTENT
 			</p>
 		</main>
 	);
