@@ -47,7 +47,7 @@ section {
 }
 
 .card-marquee {
-	@apply w-full absolute top-1/2 left-0 -translate-y-1/2 overflow-hidden;
+	@apply w-full absolute top-1/2 left-0 -translate-y-1/2 overflow-hidden flex;
 }
 
 .marquee {
