@@ -4,12 +4,13 @@ import { useGSAP } from "@gsap/react";
 const App = () => {
 	useGSAP(() => {
 		const infiniteMarquee = () => {
-			gsap.set(".marquee", {
+			const marquee = gsap.utils.toArray(".marquee");
+			gsap.set(marquee, {
 				xPercent: 0,
 			});
 			gsap.timeline({ defaults: { ease: "none", repeat: -1 } }).to(".marquee", {
-				xPercent: -50,
-				duration: 10,
+				xPercent: -100,
+				duration: 3,
 			});
 		};
 		infiniteMarquee();
@@ -28,8 +29,14 @@ const App = () => {
 							<h1>Even more fancy text</h1>
 							<h1>Last fancy text</h1>
 						</div>
+						<div className="marquee">
+							<h1>Fancy text</h1>
+							<h1>More fancy text</h1>
+							<h1>Even more fancy text</h1>
+							<h1>Last fancy text</h1>
+						</div>
 					</div>
-					<div className="card-wrapper">
+					<div className="card-wrapper hidden">
 						<div className="card-content">
 							<div className="card-title">
 								<h1>Title goes here</h1>
