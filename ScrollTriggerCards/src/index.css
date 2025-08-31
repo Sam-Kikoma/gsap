@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Molengo&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+	--font-molego: "Molengo";
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	@apply font-molego;
+}
+
+img {
+	@apply relative w-full h-full object-cover will-change-transform;
+}
+
+h1 {
+	@apply text-[2rem] md:text-[5rem] font-medium tracking-normal md:tracking-[-0.1rem] leading-[1.25];
+}
+
+p {
+	@apply text-[1.125rem] font-normal leading-[1.25];
+}
+
+section {
+	@apply relative w-full bg-[#0f0f0f] text-zinc-200;
+}
+
+.intro,
+.outro {
+	@apply h-svh p-[1.5em] flex justify-center items-center;
+}
+
+.intro h1,
+.outro h1 {
+	@apply w-full md:w-[60%] text-center leading-[1.1];
+}
+
+.cards {
+	@apply relative flex flex-col gap-[25svh];
+}
+
+.card-marquee {
+	@apply w-full absolute top-1/2 left-0 -translate-y-1/2 overflow-hidden;
+}
+
+.marquee {
+	@apply flex;
+}
+
+.marquee h1 {
+	@apply whitespace-nowrap text-[10vw] font-bold mr-7;
+}
+
+.card {
+	@apply relative w-full h-svh p-[1.5em];
+}
+
+.card-wrapper {
+	@apply will-change-transform relative w-full h-full;
+}
+
+.card-image {
+	@apply absolute w-full h-full rounded-[150px] overflow-hidden;
+}
+
+.card-image img {
+	@apply scale-200;
+}
+
+.card-content {
+	@apply absolute w-full h-full flex items-end justify-center z-10;
+}
+
+.card-content .card-title {
+	@apply w-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center;
+}
+
+.card-content .card-description {
+	@apply text-center w-[90%] md:w-[40%] mb-[3em] relative transform translate-x-2/5 opacity-0;
+}
+
+.card:nth-child(2) {
+	@apply mt-[50vh];
+}
+
+.char {
+	@apply relative overflow-hidden inline-block;
+}
+
+.char span {
+	@apply transform translate-x-full will-change-transform;
+}
